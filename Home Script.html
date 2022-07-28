@@ -422,12 +422,29 @@
                 <div class="row">
                     <div class="col-md-6 col-sm-5">
                         <div class="text-center">
-                            <video autoplay playsinline style="pointer-events: none;"
+                            <video id="myVideo" onclick="playVid()"  
                                 src="img/HP Pavilion Gaming 15 Laptop _ HP Pavilion Gaming _ HP Asia.mp4" height="500"
                                 width="460"></video>
                         </div>
                     </div>
-
+                    <script> 
+                        var vid = document.getElementById("myVideo"); 
+                        var a=2;
+                        function playVid() { 
+                          if(a % 2 == 0)
+                          {
+                           vid.play();
+                           
+                          }
+                          else
+                          {
+                              vid.pause(); 
+                          }
+                          a = a + 1;
+                        } 
+                        
+                        
+                        </script>
                     <div class="col-md-5 col-md-offset-1 col-sm-7">
                         <div class="saleoff-actions">
                             <div class="time" data-countdown="countdown" data-date="10-20-2016-10-20-30"></div>
